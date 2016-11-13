@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="Wisco.ico" />
+	<title> On Wisconsin </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="scripts/ninja-slider.css" rel="stylesheet" type="text/css" />
+
+<style>
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 75%;
+}
+
+#top {
+  margin: 0px;
+  top:0px;
+  padding: 0px;
+  height:100%;
+  background-image: url('images/IdahoBackground.jpg');
+  background-position: 100% 100%;
+  background-repeat:no-repeat;
+  width:100%;
+}
+
+#left, #right {
+	background:#7f1e1e;
+	position: fixed;
+}
+#left, #right {
+	padding: 5px;
+	top: 0px; bottom: 0;
+	width: 50px;
+}
+#left { left: 0; }
+#right { right: 0; }
+
+.quote{
+  margin: auto;
+  width: 50%;
+  border-style: solid;
+  border-size: 20px
+  border-color: solid #73AD21;
+  padding: 5px;
+  color: white;
+}
+.title{
+  margin: auto;
+  width: 70%;
+}
+
+h1 {
+  font-size:40px;
+  font-weight:bold;
+  color:white;
+}
+
+#content {
+  margin-top: 200px;
+  margin: auto;
+  width: 70%;
+
+}
+#aboutMe{
+  margin-top: 200px;
+  margin: auto;
+  width: 70%;
+}
+
+.stretch{
+    width:100%;
+    height:100%;
+}
+.image{
+    margin: 4px 25px;
+}
+
+.aboutMeButton{
+    background-color: #7f1e1e;
+    border: 2px solid #7f1e1e;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 0px;
+    -webkit-transition-duration: 0.4s
+    transition-duration: 0.4s;
+    cursor:pointer;
+}
+
+.aboutMeButton1{
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: #7f1e1e;
+    color: white;
+    margin: 4px 0px;
+}
+
+.aboutMeButton1:hover {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 2px solid #7f1e1e;
+    background-color: white;
+    color: #7f1e1e;
+    margin: 4px 0px;
+}
+
+
+
+.button{
+    background-color: #7f1e1e;
+    border: 2px solid #7f1e1e;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 25px;
+    -webkit-transition-duration: 0.4s
+    transition-duration: 0.4s;
+    cursor:pointer;
+}
+
+.button1{
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: #7f1e1e;
+    color: white;
+    margin: 4px 80px;
+}
+
+.button1:hover {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 2px solid #7f1e1e;
+    background-color: white;
+    color: #7f1e1e;
+    margin: 4px 80px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px  0 rgba(0,0,0,0.2),
+                0 6px 20px 0 rgba(0,0,0,0.19);
+                -webkit-animation-name: animatetop;
+                -webkit-animation-duration: 0.4s;
+                animation-name: animatetop;
+                animation-duration: 0.4s               
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop{
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop{
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header{
+  padding: 2px 16px;
+  background-color: #7f1e1e;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-body > .img-responsive {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #7f1e1e;
+  color: white;
+}
+
+</style>
+</head>
+
+<body>
+<div id="top">
+  <br/><br/>
+  <div class="quote">
+    <h3>"Everybody in this country should learn how to program a
+         computer... because it teaches you how to think" - Steve Jobs</h3>
+  </div>
+  
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+  <div class="title">
+    <h1>Cale Geffre's Online Portfolio</h1>
+  </div>
+  <br/>
+
+</div>
+
+<div id="left"></div>
+<div id="right"></div>
+
+<div id="aboutMe">
+
+<br/>
+
+<h2>About Me</h2>
+<img src="images/Cale-Geffre.png"style="float:left;width:80px;padding:20px">
+<p>I am a 3rd year student studying computer engineering at UW-Madison. I created this online portfolio
+from scratch as a way to learn the basics of HTML, Javascript and CSS. It's designed  to be an interactive
+and visual form of a resume, so scroll through, learn a little about my experiences, skills and interests. Contact
+information and a paper resume are available directly below.</p>
+
+<input type="button" class="aboutMeButton aboutMeButton1" value="My Resume" onClick="resume()">
+
+<button class="aboutMeButton aboutMeButton1" id="contactButton">Contact Me</button>
+	<div id="contactModal" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">x</span>
+				<h2>Contact Me</h2>
+			</div>
+			<div class="modal-body">
+				<p><strong>Personal Email:</strong> cale.geffre@gmail.com</p>
+				<p><strong>School Email:</strong> geffre@wisc.edu</p>
+				
+				<a target="_blank" href="http://linkedin.com/in/calegeffre"><img src="images/LinkedIn.jpg"width="50px"height="50px"/></a>
+				<a target="_blank" href="http://github.com/calegeffre"><img src="images/GitHub.png"width="50px"height="50px"/></a>
+			</div>
+			<div class="modal-footer"></div>
+		</div>
+	</div>
+
+
+</div>
+
+<br/><br/><br/>
+
+<div id="content">
+<h2>Experiences</h2>
+
+<img class="image"src="images/lel.png"style="width:250px">
+<img class="image"src="images/Seagate.jpg"style="width:250px">
+<img class="image"src="images/badgerloop.png"style="width:200px"><br/>
+
+
+	<button class="button button1"id="vizButton">vizHome Project</button>
+	<div id="vizModal" class="modal">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <span class ="close">X</span>
+		  <h2>Undergraduate Programmer</h2>
+		  <p>August 2015 - May 2016, August 2016 - Present</p>
+		</div>
+		<div class="modal-body">
+		  <p>
+		  Currently, I work as a student programmer for the vizHOME project here in Madison. 
+		  This project is a part of the <a target="_blank"href="http://www.wid.wisc.edu/research/lel"> 
+		  Living Environments Lab</a>, a virtual reality lab located at the Wisconsin Institute
+		  for Discovery.</p>
+		  <p>The vizHOME project focuses on assessing peoples personal health information management 
+		  using virtual reality to simulate home environments. We have 20 point cloud models of 
+		  real homes that were collected using a lidar scanner.</p>
+		  <p>My responsibilities include:
+		  <ul>
+			<li>
+			Improving the efficiency of the pipeline from lidar scan data to point cloud models that can be represented in our virtual reality CAVE.
+			</li><li>
+			Assisting in research in a technical role, helping participants get comfortable with navigation in our CAVE and executing various experiments and scenarios.
+			</li><li>
+			Volunteering in outreach events like Science Fest, lab tours, and virtual reality demos.
+			</li>
+		  </ul>
+		  </p>
+		</div>
+		<div class="modal-footer"></div>
+	  </div>
+	</div>
+
+	<button class="button button1"id="seaButton">Seagate</button>
+	<div id="seaModal" class="modal">
+	  <div class="modal-content">
+		<div class = "modal-header">
+		  <span class="close">X</span>
+		  <h2>Firmware and Data Reliability Intern</h2>
+		  <p>May 2016 - August 2016</p>
+		</div>
+		<div class = "modal-body">
+		  <p>
+		  This past summer I interned at Seagate, a world leader in computer
+		  memory, working in their firmware division. My accomplishments included:
+		  
+		  <ul>
+			<li>Sucessfully debugging issues and submitting changes to firmware code to fix 
+			bugs in reliability systems.</li>
+			<li>Creation of a robust simulation of a data reliability system to look at the 
+			benefits of potential features or code changes to help assist in decisions.</li>
+			<li>Creation of python tools for team members to quickly parse through 
+			and gain access to specific drive information.</li>
+		  </ul>
+		  </p>
+		  <p> I know what you might be thinking, talk is cheap, what did his manager have to say about him? <strong>(click to enlarge)</strong></p>
+		  <img onClick="perfReview()"src="images/ManagerReview.jpg"style="width:400px"class="img-responsive" />
+		  </div>
+		<div class="modal-footer"></div>
+	  </div>
+	</div>
+ 
+	<button class="button button1"id="loopButton">Badgerloop VR</button>
+	<div id="loopModal" class="modal">
+	  <div class="modal-content">
+		<div class = "modal-header">
+		  <span class="close">X</span>
+		  <h2>Badgerloop VR Team Member</h2>
+		  <p>October 2016 - Present</p>
+		</div>
+		<div class = "modal-body">
+		  <p>
+		  Working with the Badgerloop team in creating various virtual reality experiences 
+		  to showcase the hyperloop technology being created here at UW.      
+		  </p>
+		  <p>
+		  ** Under Construction, More Coming Soon! **
+		  </p>
+		</div>
+		<div class="modal-footer"></div>
+	  </div>
+	</div>
+
+<br/><br/><br/><br/>
+
+</div>
+<div id="content">
+
+	<div style="display:none;">
+		<div id="ninja-slider">
+			<div class ="slider-inner">
+				<ul>
+					<li>
+						<a class="ns-img" href="images/NotecardAppFull.JPG"></a>
+						<div class="caption">
+							<h3>Notecard App for Google Cardboard</h3>
+							<p>Created an app that allows you to scroll through notecards in a classroom environment</p>
+						</div>
+					</li>
+					<li>
+						<a class="ns-img" href="images/WifiCar2.JPG"></a>
+						<div class="caption">
+							<h3>Wifi Controlled Car</h3>
+							<p>This was created at <a target="_blank"href="https://devpost.com/software/huskiehack">Huskie Hack 2016</a>, I breadboarded the electrical components for testing,
+							   3D printed the wheels and built the axels for turning.</p>
+							<p> Awards: Reimagining Robotics in 22nd Century, CDK Automotive Evolution </p>
+						</div>
+					</li>
+					<li>
+						<a class="ns-img" href="images/WorkingGUI.png"></a>
+						<div class="caption">
+							<br/>
+							<h3>Glamorous GUI Making</h3>
+							<p>One of my responsibilities at the LEL includes making the pipeline, from LiDAR scan data to points
+							that can be displayed in virtual reality, easier to use and more responsive. This is for potential distribution
+							of our process to the general public after the project has completed.
+							</p>
+						</div>
+					</li>
+					<li>
+						<a class="ns-img" href="images/SpottedCowPreview.jpeg"	></a>
+						<div class="caption">
+							<h3>Artistic</h3>
+							<p>When I'm not busy with the 0s and 1s I enjoy making stuff with my hands.</p>
+						</div>
+					</li>
+					<li>
+						<a class="ns-img" href="images/GalaxyConflicts.PNG"	></a>
+						<div class="caption">
+							<h3>Galaxy Conflicts</h3>
+							<p>I assisted in the creation of an HTC Vive demo for the LEL to display at ScienceFest.
+								I created the lightsaber on/off animation and the gap openings for death stars to appear from.</p>
+						</div>
+					</li>
+					<li>
+						<a class="ns-img" href="images/ManagerReview.jpg" ></a>
+						<div class="caption">
+							<h3>Seagate Summer 2016</h3>
+							<p>Shameless plug, working at Seagate was a great experience. My biggest growth came in being able to effectively
+							understand issues on the team, and come up with and execute solutions for solving them, while knowing where and how to get 
+							help.
+							</p>
+						</div>
+					</li>
+					<li>
+						<a class="ns-img" href="images/BopIt.JPG"	></a>
+						<div class="caption">
+							<h3>Bop It Project</h3>
+							<p>A class project where you solder all elements onto the board, then program a game. I coded a two player
+							game where your given various instructions to flip switches, turn potentiometers or push buttons faster than your
+							opponent.</p>
+						</div>
+					</li>
+					<li>
+						<a class="ns-img" href="images/Table2Preview.jpeg"	></a>
+						<div class="caption">
+							<h3>Summer Project</h3>
+							<p>What good is attending UW-Madison if you don't have a replica table of the Kohl Center for dining, studying, and
+								other various college kid activities?</p>
+						</div>
+					</li>
+					<li>
+						<a class="ns-img" href="images/AsparagusModel.JPG"	></a>
+						<div class="caption">
+							<h3>Intro to Engineering, Tractor Scoot</h3>
+							<p>I sharpened my 3D modelling skills by recreating our final project in Autodesk Inventor.</p>
+						</div>
+					</li>
+				</ul>
+				<div id="fsBtn" class="fs-icon" title="Expand/Close"></div>
+			</div>
+		</div>
+	</div>
+	
+	<h2> Project Showcase</h2>
+
+	<div style="max-width:900px; margin:90px auto;">
+	<div class="gallery">
+		<img src="images/NotecardApp.JPG"onclick="lightbox(0)"style="width:200px; height=200px" />
+		<img src="images/WifiCar.JPG"onclick="lightbox(1)"style="width:200px;height:200px"   />
+		<img src="images/WorkingGUI_thumbnail.png"onclick="lightbox(2)"style="width:200px;height:200px" />
+		<img src="images/SpottedCowPreview.jpeg" onclick="lightbox(3)"style="width:200px;height:200px"   />
+		<img src="images/GalaxyConflicts.PNG" onclick="lightbox(4)"style="width:200px;height:200px"   />
+		<img src="images/ManagerReview.jpg" onclick="lightbox(5)"style="width:200px;height:200px" />
+		<img src="images/BopIt.JPG" onclick="lightbox(6)"style="width:200px;height:200px"   />	
+		<img src="images/Table2Preview.jpeg" onclick="lightbox(7)"style="width:200px;height:200px"   />	
+		<img src="images/AsparagusModel1.JPG" onclick="lightbox(8)"style="width:200px;height:200px"   />
+	</div>
+	</div>	
+
+</div>
+
+<script>
+
+function resume(){window.open('files/CaleGeffre_Resume.pdf');}
+function perfReview(){window.open('images/ManagerReview.jpg');}
+
+var contactModal = document.getElementById('contactModal');
+var contactBtn = document.getElementById('contactButton');
+var contactSpan = document.getElementsByClassName("close")[0];
+contactBtn.onclick = function() {contactModal.style.display = "block";}
+
+
+var vizModal = document.getElementById('vizModal');
+var vizBtn = document.getElementById("vizButton");
+var vizSpan = document.getElementsByClassName("close")[1];                  
+vizBtn.onclick = function() {vizModal.style.display = "block";}
+
+var seaModal = document.getElementById('seaModal');
+var seaBtn = document.getElementById("seaButton");
+var seaSpan = document.getElementsByClassName("close")[2];
+seaBtn.onclick = function() {seaModal.style.display = "block";}
+
+var loopModal = document.getElementById('loopModal');
+var loopBtn = document.getElementById('loopButton');
+var loopSpan = document.getElementsByClassName("close")[3];
+loopBtn.onclick = function() { loopModal.style.display = "block"; }
+
+window.onclick = function(event) {
+	if (event.target == contactModal || event.target == contactSpan){
+		contactModal.style.display = "none";
+	}
+    if (event.target == vizModal || event.target == vizSpan) {
+        vizModal.style.display = "none";
+    }
+    if (event.target == seaModal || event.target == seaSpan) {
+        seaModal.style.display = "none";
+    }
+    if (event.target == loopModal || event.target == loopSpan){
+        loopModal.style.display = "none";
+    }
+}
+
+</script>
+
+<script src="scripts/ninja-slider.js" type="text/javascript"></script>
+<script>
+	// Script for image gallery
+	function lightbox(idx) {
+		//show the slider's wrapper: this is required when the transitionType has been set to "slide" in the ninja-slider.js
+		var ninjaSldr = document.getElementById("ninja-slider");
+		ninjaSldr.parentNode.style.display = "block";
+
+		nslider.init(idx);
+
+		var fsBtn = document.getElementById("fsBtn");
+		fsBtn.click();
+	}
+
+	function fsIconClick(isFullscreen) { //fsIconClick is the default event handler of the fullscreen button
+		if (isFullscreen) {
+			var ninjaSldr = document.getElementById("ninja-slider");
+			ninjaSldr.parentNode.style.display = "none";
+		}
+	}
+</script>
+
+
+
+</body>
+</html>
