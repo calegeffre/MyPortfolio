@@ -23,6 +23,7 @@ body {
   background-image: url('images/IdahoBackground.jpg');
   background-position: 100% 100%;
   background-repeat:no-repeat;
+  background-size: cover;
   width:100%;
 }
 
@@ -45,12 +46,25 @@ body {
   border-size: 20px
   border-color: solid #73AD21;
   padding: 5px;
-  color: white;
+  color: #7f1e1e;
 }
 .title{
   margin: auto;
   width: 70%;
+  color: #7f1e1e;
 }
+
+
+aboutMeBorder{
+  margin: auto;
+  width: 50%;
+  border-style: solid;
+  border-size: 20px
+  border-color: #7f1e1e;
+  padding: 5px;
+  color: white;
+}
+
 
 h1 {
   font-size:40px;
@@ -66,6 +80,11 @@ h1 {
 }
 #aboutMe{
   margin-top: 200px;
+  margin: auto;
+  width: 70%;
+}
+
+#coursework{
   margin: auto;
   width: 70%;
 }
@@ -123,18 +142,20 @@ h1 {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 25px;
+    margin: 4px 40px;
     -webkit-transition-duration: 0.4s
     transition-duration: 0.4s;
     cursor:pointer;
+	max-width: 100%;
+	font-family:"Courier New";
 }
 
 .button1{
     padding: 8px 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: #7f1e1e;
     color: white;
-    margin: 4px 80px;
+    margin: 4px 61px;
 }
 
 .button1:hover {
@@ -143,14 +164,27 @@ h1 {
     border: 2px solid #7f1e1e;
     background-color: white;
     color: #7f1e1e;
-    margin: 4px 80px;
+    margin: 4px 61px;
+}
+
+.skills{
+	margin: auto;
+	width: 50%;
+	border-style: solid;
+	border-size: 20px
+	border-color: white;
+	padding: 5px;
+	color: white;
+    margin-bottom: 10px;
+	margin-top: 10px;
+	font-family:"Courier New";
 }
 
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 50px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -221,18 +255,54 @@ h1 {
   color: white;
 }
 
+h4,h5{
+	line-height:0px;
+}
+h5.smallRed{
+	margin-top: 18px;
+	margin-bottom: 25px;
+	color: #7f1e1e;
+}
+h5.small{
+	margin-top: 18px;
+	margin-bottom: 0px;
+}
+h5.smallBottom{
+	margin-top: 18px;
+	margin-bottom: 40px;
+}
+p.nospace{
+	margin-bottom: 5px;
+	margin-top: 20px;
+}
+p.aboutMeText{
+	font-size: 15px;
+}
+
+.footer {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  height: 50px;
+  background-color: #7f1e1e;
+  text-align: center;
+  color: white;
+}
+
 </style>
 </head>
 
 <body>
+<FONT FACE="courier">
 <div id="top">
-  <br/><br/>
+  <br/><br/><br/>
   <div class="quote">
-    <h3>"Everybody in this country should learn how to program a
-         computer... because it teaches you how to think" - Steve Jobs</h3>
+    <h3>"Virtual reality is a technology that could actually allow you to 
+		connect on a real human level, soul-to-soul, regardless of where you are in the world." - Chris Milk</h3>
   </div>
   
-  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <br/><br/><br/><br/><br/><br/><br/><br/>
 
   <div class="title">
     <h1>Cale Geffre's Online Portfolio</h1>
@@ -245,17 +315,18 @@ h1 {
 <div id="right"></div>
 
 <div id="aboutMe">
+<br/><br/>
 
-<br/>
 
-<h2>About Me</h2>
-<img src="images/Cale-Geffre.png"style="float:left;width:80px;padding:20px">
-<p>I am a 3rd year student studying computer engineering at UW-Madison. I created this online portfolio
-from scratch as a way to learn the basics of HTML, Javascript and CSS. It's designed  to be an interactive
-and visual form of a resume, so scroll through, learn a little about my experiences, skills and interests. Contact
-information and a paper resume are available directly below.</p>
+<img src="images/Cale-Geffre.png"style="float:left;width:100px;padding:20px">
+<p class="aboutMeText">I'm Cale (yes like the vegetable). I'm a 3rd year student studying computer engineering at UW-Madison. I enjoy using 
+cutting edge technologies to solve everyday problems in simple, elegant ways. One of these cutting edge techs is Virtual Reality. I am incredibly excited
+about the potential of VR and the way it will revolutionize communication with people around the world and education and how we learn.</p>
 
-<input type="button" class="aboutMeButton aboutMeButton1" value="My Resume" onClick="resume()">
+<p>I created this online portfolio to help people really get a feel for my skills and interests beyond what a paper form resume can provide, 
+so scroll through, learn a little about my experiences, skills and interests! Contact information and a copy of my physical resume are available directly below.</p>
+
+<input type="button" class="aboutMeButton aboutMeButton1" value="My Resume" onClick="resume()" FACE="courier">
 
 <button class="aboutMeButton aboutMeButton1" id="contactButton">Contact Me</button>
 	<div id="contactModal" class="modal">
@@ -282,11 +353,10 @@ information and a paper resume are available directly below.</p>
 
 <div id="content">
 <h2>Experiences</h2>
-
-<img class="image"src="images/lel.png"style="width:250px">
-<img class="image"src="images/Seagate.jpg"style="width:250px">
-<img class="image"src="images/badgerloop.png"style="width:200px"><br/>
-
+<br/>
+	<img class="image"src="images/lel.png"style="width:300px"/>
+	<img class="image"src="images/Seagate.jpg"style="width:300px"/>
+	<img class="image"src="images/badgerloop.png"style="width:250px"/>
 
 	<button class="button button1"id="vizButton">vizHome Project</button>
 	<div id="vizModal" class="modal">
@@ -294,6 +364,7 @@ information and a paper resume are available directly below.</p>
 		<div class="modal-header">
 		  <span class ="close">X</span>
 		  <h2>Undergraduate Programmer</h2>
+		  <p>C++ | QT | Point Cloud Data | Visual Studio</p>
 		  <p>August 2015 - May 2016, August 2016 - Present</p>
 		</div>
 		<div class="modal-body">
@@ -302,13 +373,11 @@ information and a paper resume are available directly below.</p>
 		  This project is a part of the <a target="_blank"href="http://www.wid.wisc.edu/research/lel"> 
 		  Living Environments Lab</a>, a virtual reality lab located at the Wisconsin Institute
 		  for Discovery.</p>
-		  <p>The vizHOME project focuses on assessing peoples personal health information management 
-		  using virtual reality to simulate home environments. We have 20 point cloud models of 
-		  real homes that were collected using a lidar scanner.</p>
+		  
 		  <p>My responsibilities include:
 		  <ul>
 			<li>
-			Improving the efficiency of the pipeline from lidar scan data to point cloud models that can be represented in our virtual reality CAVE.
+			Improving the efficiency of the pipeline from lidar scan data to point cloud models for representation in the CAVE.
 			</li><li>
 			Assisting in research in a technical role, helping participants get comfortable with navigation in our CAVE and executing various experiments and scenarios.
 			</li><li>
@@ -316,23 +385,30 @@ information and a paper resume are available directly below.</p>
 			</li>
 		  </ul>
 		  </p>
+		  
+		  
+		  <p>The vizHOME project focuses on assessing peoples personal health information management 
+		  using virtual reality to simulate home environments. We have 20 point cloud models of 
+		  real homes that were collected using a lidar scanner. These models, after processing, can be displayed
+		  in our virtual reality CAVE, a 10'x 10'x 10' cube that projects a virtual environment on all sides (See link above for more info)</p>
+		 
 		</div>
 		<div class="modal-footer"></div>
 	  </div>
 	</div>
 
-	<button class="button button1"id="seaButton">Seagate</button>
+	<button class="button button1"id="seaButton">Summer 2016 Internship</button>
 	<div id="seaModal" class="modal">
 	  <div class="modal-content">
 		<div class = "modal-header">
 		  <span class="close">X</span>
 		  <h2>Firmware and Data Reliability Intern</h2>
+		  <p>C++ | Python | Excel VBA | Agile/Scrum Methods</p>
 		  <p>May 2016 - August 2016</p>
 		</div>
 		<div class = "modal-body">
 		  <p>
-		  This past summer I interned at Seagate, a world leader in computer
-		  memory, working in their firmware division. My accomplishments included:
+		  This past summer I interned at Seagate, in their firmware and reliability division. My accomplishments included:
 		  
 		  <ul>
 			<li>Sucessfully debugging issues and submitting changes to firmware code to fix 
@@ -350,18 +426,23 @@ information and a paper resume are available directly below.</p>
 	  </div>
 	</div>
  
-	<button class="button button1"id="loopButton">Badgerloop VR</button>
+	<button class="button button1"id="loopButton">Virtual Reality Team</button>
 	<div id="loopModal" class="modal">
 	  <div class="modal-content">
 		<div class = "modal-header">
 		  <span class="close">X</span>
 		  <h2>Badgerloop VR Team Member</h2>
+		  <p>Unity | C# | Visual Studio | HTC Vive Development</p>
 		  <p>October 2016 - Present</p>
 		</div>
 		<div class = "modal-body">
 		  <p>
 		  Working with the Badgerloop team in creating various virtual reality experiences 
 		  to showcase the hyperloop technology being created here at UW.      
+		  </p>
+		  <p> 
+		  I have worked on station design, creating a futuristic model of a hyperloop station. This was presented
+		  at the Badgerloop Reveal Event to sponsors and faculty members and also the public.
 		  </p>
 		  <p>
 		  ** Under Construction, More Coming Soon! **
@@ -381,6 +462,13 @@ information and a paper resume are available directly below.</p>
 			<div class ="slider-inner">
 				<ul>
 					<li>
+						<a class="ns-img" href="images/BadgerloopBooske.jpg"></a>
+						<div class="caption">
+							<h3>Badgerloop Virtual Reality Demo</h3>
+							<p>Showing our virtual reality hyperloop station model at the Badgerloop Reveal Event.</p>
+						</div>
+					</li>
+					<li>
 						<a class="ns-img" href="images/NotecardAppFull.JPG"></a>
 						<div class="caption">
 							<h3>Notecard App for Google Cardboard</h3>
@@ -389,8 +477,8 @@ information and a paper resume are available directly below.</p>
 					</li>
 					<li>
 						<a class="ns-img" href="images/WifiCar2.JPG"></a>
-						<div class="caption">
-							<h3>Wifi Controlled Car</h3>
+						<div class="caption"><br/>
+							<h3>Wifi Controlled Car, Huskie Hack 2016</h3>
 							<p>This was created at <a target="_blank"href="https://devpost.com/software/huskiehack">Huskie Hack 2016</a>, I breadboarded the electrical components for testing,
 							   3D printed the wheels and built the axels for turning.</p>
 							<p> Awards: Reimagining Robotics in 22nd Century, CDK Automotive Evolution </p>
@@ -408,18 +496,18 @@ information and a paper resume are available directly below.</p>
 						</div>
 					</li>
 					<li>
-						<a class="ns-img" href="images/SpottedCow.jpeg"	></a>
-						<div class="caption">
-							<h3>Handcrafted</h3>
-							<p>When I'm not busy with the 0s and 1s I enjoy making stuff with my hands.</p>
-						</div>
-					</li>
-					<li>
 						<a class="ns-img" href="images/GalaxyConflicts.PNG"	></a>
 						<div class="caption">
 							<h3>Galaxy Conflicts</h3>
 							<p>I assisted in the creation of an HTC Vive demo for the LEL to display at ScienceFest.
 								I created the lightsaber on/off animation and the gap openings for "enemy ships" to appear from.</p>
+						</div>
+					</li>
+					<li>
+						<a class="ns-img" href="images/SpottedCow.jpeg"	></a>
+						<div class="caption">
+							<h3>Handcrafted</h3>
+							<p>When I'm not busy with the 0s and 1s I enjoy making stuff with my hands.</p>
 						</div>
 					</li>
 					<li>
@@ -473,24 +561,64 @@ information and a paper resume are available directly below.</p>
 
 	<div style="max-width:900px; margin:90px auto;">
 	<div class="gallery">
-		<img src="images/NotecardApp.JPG"onclick="lightbox(0)"style="width:200px; height=200px" />
-		<img src="images/WifiCar.JPG"onclick="lightbox(1)"style="width:200px;height:200px"   />
-		<img src="images/WorkingGUI_thumbnail.png"onclick="lightbox(2)"style="width:200px;height:200px" />
-		<img src="images/SpottedCowPreview.jpeg" onclick="lightbox(3)"style="width:200px;height:200px"   />
+		<img src="images/BadgerloopBooskePreview.jpg"onclick="lightbox(0)"style="width:200px; height:200px" />
+		<img src="images/NotecardApp.JPG"onclick="lightbox(1)"style="width:200px; height:200px" />
+		<img src="images/WifiCar.JPG"onclick="lightbox(2)"style="width:200px;height:200px"   />
+		<img src="images/WorkingGUI_thumbnail.png"onclick="lightbox(3)"style="width:200px;height:200px" />
 		<img src="images/GalaxyConflicts.PNG" onclick="lightbox(4)"style="width:200px;height:200px"   />
-		<img src="images/ManagerReview.jpg" onclick="lightbox(5)"style="width:200px;height:200px" />
-		<img src="images/BopItPreview.JPG" onclick="lightbox(6)"style="width:200px;height:200px"   />	
-		<img src="images/Table2Preview.jpeg" onclick="lightbox(7)"style="width:200px;height:200px"   />	
-		<img src="images/AsparagusModel1.JPG" onclick="lightbox(8)"style="width:200px;height:200px"   />
-		<img src="images/RemoteFinderPreview.jpg" onclick="lightbox(9)"style="width:200px;height:200px"	/>
+		<img src="images/SpottedCowPreview.jpeg" onclick="lightbox(5)"style="width:200px;height:200px"   />
+		<img src="images/ManagerReview.jpg" onclick="lightbox(6)"style="width:200px;height:200px" />
+		<img src="images/BopItPreview.JPG" onclick="lightbox(7)"style="width:200px;height:200px"   />	
+		<img src="images/Table2Preview.jpeg" onclick="lightbox(8)"style="width:200px;height:200px"   />	
+		<img src="images/AsparagusModel1.JPG" onclick="lightbox(9)"style="width:200px;height:200px"   />
+		<img src="images/RemoteFinderPreview.jpg" onclick="lightbox(10)"style="width:200px;height:200px"	/>
 	</div>
 	</div>	
 
 </div>
+<div id="coursework">
+
+	<img src="images/UW-Madison.png"align="middle" style="float:right;width:120px;padding:0px;margin-right:550px;">	
+	<h2>Education</h2>
+	<h4> University of Wisconsin - Madison </h4>
+	<h5 class="smallRed"> B.S. in Computer Engineering <i> 2014 - 2018 </i></h5>
+	<h5 class="small"> Overall GPA: &nbsp;&nbsp;&nbsp;&nbsp;3.3 / 4 </h5>
+	<h5 class="smallBottom"> Department GPA: &nbsp;3.7 / 4 </h5>
+
+	<h3> Relevant Coursework </h3>
+	
+	<ul>
+		<p class="nospace"><strong> Taking Spring 2017 </strong></p>
+		<li>CS &nbsp;537 - &nbsp;Operating Systems				</li>
+		<li>CS &nbsp;559 - &nbsp;Computer Graphics				</li>
+		<li>ECE 353 - &nbsp;Microprocessor Systems		</li>
+		<li>ECE 340 - &nbsp;Electronic Circuits			</li>
+
+		<p class="nospace"><strong> Previous Courses </strong></p>
+		<li>CS &nbsp;302 - &nbsp;Intro to Programming ( Java ) 	</li>
+		<li>CS &nbsp;367 - &nbsp;Data Structures      ( Java ) 	</li>
+		<li>CS &nbsp;354 - &nbsp;Machine Org and Programming ( C )	</li>
+		<li>CS &nbsp;240 - &nbsp;Discrete Mathematics 			</li>
+		<li>ECE 551 - &nbsp;Hardware Design and Synthesis ( Verilog )	</li>
+		<li>ECE 352 - &nbsp;Circuit Analysis and Lab					</li>
+		<li>ECE 220 - &nbsp;Electrodynamics							</li>
+		<li>ECE 203 - &nbsp;Signals, Information and Computation ( Matlab )	</li>
+		<li>PHY 202 - &nbsp;General Physics							</li>
+		<li>CHM 104 - &nbsp;General Chemistry						</li>
+	</ul>
+</div>
+
+<br/><br/><br/><br/>
+
+<div class="footer">
+    <h3>Built from scratch in Notepad++, Hosted on Raspberry Pi</h3>
+</div>
+
+</FONT>	
 
 <script>
 
-function resume(){window.open('files/CaleGeffre_Resume.pdf');}
+function resume(){window.open('files/CaleGeffre-Resume.pdf');}
 function perfReview(){window.open('images/ManagerReview.jpg');}
 
 var contactModal = document.getElementById('contactModal');
